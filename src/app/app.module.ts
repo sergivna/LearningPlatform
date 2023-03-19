@@ -13,6 +13,7 @@ import { AuthorizationInterceptor } from './shared/inerceptors/authorization.int
 import { CourseComponent } from './components/course/course.component';
 import { MatListModule } from '@angular/material/list';
 import { FormsModule } from '@angular/forms';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { FormsModule } from '@angular/forms';
     MatSlideToggleModule,
     MatSliderModule,
     MatListModule,
+    MatProgressSpinnerModule,
     FormsModule,
     HttpClientModule
   ],

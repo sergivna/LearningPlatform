@@ -12,8 +12,7 @@ export class CourseListComponent{
   courses: Course[] = [];
   pageSlice: Course[] = [];
 
-    public currentProgress = 0;
-
+  isLoading = true;
 
   constructor(private coursesService: CoursesService)
   {} 
@@ -24,6 +23,7 @@ export class CourseListComponent{
         data => {
           this.courses = data.courses;
           this.pageSlice = this.courses.slice(0, 10);
+          this.isLoading = false;
         }
       )
   }
