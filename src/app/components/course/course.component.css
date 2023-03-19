@@ -1,0 +1,53 @@
+.course {
+    display: flex;
+    flex-direction: row;
+}
+
+.lesson-list {
+    margin: 20px;
+}
+
+.play-button {
+    border: none;
+    background-color: transparent;
+    min-width: 3rem;
+    min-height: 3rem;
+    cursor: pointer;
+}
+
+.slider {
+    width: 600px;
+}
+
+.locked-lesson{
+    color: currentColor;
+    cursor: not-allowed;
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+.video-controls {
+    height: 1.5em;
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.time {
+    width: max-content;
+    line-height: 1em;
+    font-size: 12px;
+    font-variant-numeric: tabular-nums;
+}
+
+.video-player{
+    width: 60vw;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.active {
+    background-color: #eeeeee;
+}
