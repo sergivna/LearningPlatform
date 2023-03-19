@@ -16,10 +16,7 @@ export class AuthorizationInterceptor implements HttpInterceptor {
   intercept(
     req: HttpRequest<any>,
     next: HttpHandler
-  ): Observable<HttpEvent<any>> {
-      
-      console.log("interceptor");
-      
+  ): Observable<HttpEvent<any>> {      
       const cloneRequest = req.clone({
         headers: req.headers.append(
           'Authorization',
