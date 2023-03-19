@@ -1,0 +1,31 @@
+<h1>Courses</h1>
+<div *ngFor='let course of pageSlice'>
+    <div class='card'>    
+        <img class="card-img" [src]="course.previewImageLink + '/cover.webp'">  
+        <div class='card-title'>
+            <a [routerLink]="[ '/course', course.id]">
+                {{ course.title }}
+            </a>
+        </div>     
+        <div class='card-sub'>
+            {{ course.description }}
+        </div>
+        <div>
+            <p>Rate: {{ course.rating }}</p>
+            <p>Lessons: {{ course.lessonsCount }}</p>
+            <ul>
+                <li *ngFor='let skill of course.meta.skills'>
+                    {{ skill }}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<mat-paginator
+    [length]="courses.length"
+    [pageSize]="10"
+    (page) = "onPageChange($event)"
+    showFirstLastButtons
+    hidePageSize
+>
+</mat-paginator>

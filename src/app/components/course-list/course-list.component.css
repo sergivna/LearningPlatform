@@ -1,0 +1,30 @@
+.card {
+    background-color: #fff;
+    width: 500px;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 10px 10px 40px #434040;
+
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.card-img {
+    width: 350px;
+    border-radius: 11px;
+    margin: auto;
+    display: flex;
+}
+
+.card-title {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.card-sub {
+    font-size: 12px;
+    font-weight: 300;
+    margin-top: 10px;
+}
