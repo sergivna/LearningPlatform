@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { CoursesService } from '../shared/services/http/courses.service';
-import { Course } from './../shared/models/course';
-import { OnInit } from '@angular/core';
+import { CoursesService } from '../../shared/services/http/courses.service';
+import { Course } from '../../shared/models/course';
 import { PageEvent } from '@angular/material/paginator';
 
 @Component({
@@ -9,13 +8,15 @@ import { PageEvent } from '@angular/material/paginator';
   templateUrl: './course-list.component.html',
   styleUrls: ['./course-list.component.css']
 })
-export class CourseListComponent implements OnInit {
+export class CourseListComponent{
   courses: Course[] = [];
   pageSlice: Course[] = [];
 
-  constructor(
-    private coursesService: CoursesService,
-  ) { } 
+    public currentProgress = 0;
+
+
+  constructor(private coursesService: CoursesService)
+  {} 
 
   ngOnInit() : void {
     this.coursesService.getCourses()
